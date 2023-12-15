@@ -14,7 +14,7 @@ with open("README.md", "r") as f:
     long_description = f.read()
 
 setup(
-    name="pymexcr1",
+    name="monedadigitalm",
     version=version,
 
     author="abuztrade",
@@ -25,7 +25,7 @@ setup(
 
     description="Unofficial python library for interacting with the MEXC crypto exchange :REVISION:AmadoRamos",
 
-    packages=['pymexcr1'],
+    packages=['pymexc'],
     install_requires=['requests', 'websocket-client'],
 
     license='MIT License',

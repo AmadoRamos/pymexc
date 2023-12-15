@@ -4,27 +4,28 @@ from setuptools import setup, find_packages
 :author: abuztrade
 :license: MIT License, see LICENSE file.
 :copyright: (c) 2022 by abuztrade.
+:revision: Amado Ramos
 """
 
 
-version = '1.0.10'
+version = '1.0.10r1'
 
 with open("README.md", "r") as f:
     long_description = f.read()
 
 setup(
-    name="pymexc",
+    name="pymexcr1",
     version=version,
 
     author="abuztrade",
     author_email="abuztrade.work@gmail.com",
 
-    url="https://github.com/makarworld/pymexc.git",
-    download_url=f"https://github.com/makarworld/pymexc/archive/refs/tags/v{version}.zip",
+    url="https://github.com/AmadoRamos/pymexc.git",
+    download_url=f"https://github.com/AmadoRamos/pymexc/archive/refs/tags/v{version}.zip",
 
-    description="Unofficial python library for interacting with the MEXC crypto exchange",
+    description="Unofficial python library for interacting with the MEXC crypto exchange :REVISION:AmadoRamos",
 
-    packages=['pymexc'],
+    packages=['pymexcr1'],
     install_requires=['requests', 'websocket-client'],
 
     license='MIT License',

@@ -31,7 +31,11 @@ while True:
     ...
 
 """
-from typing import Callable, Literal, List, Optional, Union
+from typing import Callable, List, Optional, Union
+try:
+    from typing import Literal
+except ImportError:
+     from typing_extensions import Literal
 import threading
 import time
 import logging

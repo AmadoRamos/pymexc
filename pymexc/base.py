@@ -1,5 +1,10 @@
+from typing import Union
+try:
+    from typing import Literal
+except ImportError:
+     from typing_extensions import Literal
+
 from abc import ABC, abstractclassmethod
-from typing import Union, Literal
 import hmac
 import hashlib
 import requests

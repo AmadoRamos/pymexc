@@ -159,7 +159,7 @@ class _FuturesHTTP(MexcSDK):
             
                 if self.api_key and self.api_secret:
                     # add signature
-                    timestamp = str(int(time.time() * 1000))
+                    timestamp = str(self.get_server_time())
 
                     kwargs['headers'] = {
                         "Request-Time": timestamp,
@@ -169,3 +169,10 @@ class _FuturesHTTP(MexcSDK):
         response = self.session.request(method, f"{self.base_url}{router}", *args, **kwargs)
 
         return response.json()
+    
+    def get_server_time(self):
+        response = self.session.request("GET",'https://www.mexc.com/open/api/v2/common/timestamp')
+        if response.status_code == 200:
+            return response.json()['data']
+        else:
+            raise int(time.time() * 1000)
